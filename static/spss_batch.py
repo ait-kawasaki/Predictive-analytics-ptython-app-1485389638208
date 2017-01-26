@@ -1,14 +1,21 @@
-# coding utf-8
-import pprint
+# -*- coding: utf-8 -*-
 import requests
+import json
 
-def main():
+url = "https://ibm-watson-ml.mybluemix.net/pm/v1/score/test1"
+print url
 
-    response = requests.get(
-        'https://ibm-watson-ml.mybluemix.net/pm/v1/score/test1?accesskey=3pmpR/Rmw/E93jH25U9/dP6yciTZ+Gth0O3gDIJnpUvMOoVIgpPvg2+v3QyZPPnfHxGxQ3pIogjgEOjN0TGDTcL0h32gVzPkwMbmHXNpi+Hox+Mvwa+7GQ8vHAZW3CihtzIPylVCeA53o1U3j5CUNs2WmPAxFgfEYJlcc/bkHVg=',
-        headers={'Content-Type': 'application/json'}
-        )
-    pprint.pprint(response.json())
+querystring = {"accesskey": "N4LnXREVJ44YgZy4MCnIJaU7NCAxoihZBHpVqS6abjaubA3inBFJ/eM4ZBhB2AxLHxGxQ3pIogjgEOjN0TGDTcL0h32gVzPkwMbmHXNpi+EC1T08nu1092OflnlsegKP1CVHD9o08LGV730psB98ePdHELxpedVqkCUxFn4YxR0="}
+#payload = "{\"tablename\":\"Web新規申し込み\",\"header\":[\"顧客番号\",\"性別\",\"年齢\",\"職業区分\",\"所有車区分\",\"所有車メーカー\",\"下取り\",\"Web検索語スコア\",\"Web滞在秒数\",\"Web遷移スコア\",\"Web遷移タイプ\",\"検討度合\",\"運転歴\"], \"data\":[[9817297,\"男性\",24,\"自営業\",\"他社\",\"外国車\",\"ない\",112,269,2,\"タイプA\",3,0]]}"
+payload = {
+    'tablename': 'Web新規申し込み',
+    'header': ['顧客番号','性別','年齢','職業区分','所有車区分','所有車メーカー','下取り','Web検索語スコア','Web滞在秒数','Web遷移スコア','Web遷移タイプ','検討度合','運転歴'],
+    'data': [[9817297,'男性',24,'自営業','他社','外国車','ない',112,269,2,'タイプA',3,0]]
+    }
+headers = {
+    'content-type': "application/json;charset=UTF-8"
+    }
 
-if __name__== '__main__':
-    main()
+response = requests.request("POST", "https://ibm-watson-ml.mybluemix.net/pm/v1/score/test1",headers=headers,params=querystring, data=json.dumps(payload))
+
+print(response.text)
