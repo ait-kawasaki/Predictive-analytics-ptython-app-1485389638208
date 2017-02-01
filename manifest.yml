@@ -3,6 +3,6 @@ applications:
   memory: 128M
   instances: 1
   domain: mybluemix.net
-  name: Predictive analytics ptython app
-  host: AIT-kawa-Predictive-analytics-ptython-app
+  name: Predictive analytics python app
+  host: AIT-kawa-Predictive-analytics-python-app
   disk_quota: 1024M
