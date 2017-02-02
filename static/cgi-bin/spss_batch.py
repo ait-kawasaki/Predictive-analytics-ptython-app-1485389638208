@@ -3,7 +3,7 @@
 import requests
 import json
 
-url = "https://ibm-watson-ml.mybluemix.net/pm/v1/score/test2"
+url = "https://ibm-watson-ml.mybluemix.net/pm/v1/score/test1"
 print url
 
 querystring = {"accesskey": "N4LnXREVJ44YgZy4MCnIJaU7NCAxoihZBHpVqS6abjaubA3inBFJ/eM4ZBhB2AxLHxGxQ3pIogjgEOjN0TGDTcL0h32gVzPkwMbmHXNpi+EC1T08nu1092OflnlsegKP1CVHD9o08LGV730psB98ePdHELxpedVqkCUxFn4YxR0="}
