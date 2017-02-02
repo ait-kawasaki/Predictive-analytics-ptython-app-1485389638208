@@ -1,8 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import requests
-import json
-
 print "Content-type: text/html"
 print
 print "<title>Test CGI</title>"
