@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import requests
 import json
@@ -18,4 +19,8 @@ headers = {
 
 response = requests.request("POST", "https://ibm-watson-ml.mybluemix.net/pm/v1/score/test1",headers=headers,params=querystring, data=json.dumps(payload))
 
+print "Content-type: text/html"
+print
+print "<title>Test CGI</title>"
+print "<p>Hello World!</p>"
 print(response.text)
