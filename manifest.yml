@@ -6,3 +6,4 @@ applications:
   name: Predictive analytics ptython app
   host: AIT-kawa-Predictive-analytics-ptython-app
   disk_quota: 1024M
+  command: bash run.sh
