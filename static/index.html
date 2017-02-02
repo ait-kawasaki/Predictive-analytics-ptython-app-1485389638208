@@ -18,15 +18,18 @@
 		</tr>
 		<tr>
 			<td>
-    <form method="POST" action="data_load.cgi">
+    <form method="GET" action="test.html">
+    データのロード：<input type="submit" name="実行">
+    </form>
+    <form method="GET" action="data_load.cgi">
     データのロード：<input type="submit" name="実行">
     </form>
     <br/>
-    <form method="POST" action="spss_batch.cgi">
-    分析実行：<input type="submit" name="実行">
+    <form method="GET" action="spss_batch.cgi">
+    分析実行：<input type="submit" name="実行CGI">
     </form>
     <br/>
-    <form method="POST" action="result.cgi">
+    <form method="GET" action="result.cgi">
     結果確認：<input type="submit" name="実行">
     </form>]
 			</td>
