@@ -6,3 +6,4 @@ applications:
   name: Predictive analytics ptython app
   host: AIT-kawa-Predictive-analytics-ptython-app
   disk_quota: 1024M
+  buildpack: https://github.com/cloudfoundry/python-buildpack#v1.5.5
